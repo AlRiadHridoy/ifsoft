@@ -138,6 +138,7 @@ Header Area
 ************************************************/
 header {
   position: relative;
+  z-index: 99999;
 }
 
 header .container {
