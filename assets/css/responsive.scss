@@ -1,0 +1,351 @@
+:root {
+  --blk: rgb(24, 24, 24);
+  --orng: #ff3c00;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  header {
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .header-top::before {
+      width: 65%;
+    }
+  }
+
+  .header-top .container{
+    padding: 0;
+  }
+
+  .hero-right img {
+    max-width: 600px;
+  }
+
+  .member-img {
+    img {
+      max-width: 320px;
+    }
+  }
+  .apointment-right {
+    padding: 0;
+  }
+  .apointment-abs {
+    padding: 0 2rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-color {
+    a {
+      color: var(--blk) !important;
+    }
+  }
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  header {
+    position: relative;
+    .container ul {
+      gap: 0;
+    }
+  }
+
+  .header-top {
+    display: none;
+  }
+  .header-bottom {
+    background-color: var(--orng);
+
+    .container {
+      padding: 1rem 2.5rem;
+    }
+  }
+
+  .sticky  {
+    color: var(--blk);
+  }
+
+  .change {
+
+    div:nth-of-type(even) {
+      display: none;
+      transition: 0.1s ease-in-out;
+    }
+    div:first-child {
+      transform: rotate(-45deg) translate(-5px, 5px);
+    }
+
+    div:last-child {
+      transform: rotate(45deg);
+    }
+  }
+  .hamburger {
+    min-height: 20px;
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+    cursor: pointer;
+
+    div {
+      background-color: white;
+      width: 25px;
+      height: 4px;
+      flex-direction: column;
+      border-radius: 5px;
+      transition: 0.1s ease-in-out;
+    }
+  }
+
+  .main-logo {
+    display: none;
+  }
+
+  .header-bottom {
+    nav {
+      position: absolute;
+      left: -100%;
+      top: 100%;
+      background-color: white;
+      height: 100vh;
+      width: 350px;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      transition: 0.5s;
+    }
+    nav.toggle {
+      left: 0;
+    }
+    ul {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      li {
+        width: 100%;
+      }
+
+      li:not(:nth-of-type(6)) {
+        border-bottom: 0.5px solid rgb(209, 209, 209);
+      }
+
+      a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5rem;
+        padding: 0.8rem 2rem;
+      }
+      i {
+        display: none;
+      }
+
+      i:last-child {
+        display: block;
+      }
+      span i {
+        display: flex;
+        justify-self: flex-end;
+        color: var(--blk);
+        font-size: 0.8rem;
+      }
+
+      li:hover i {
+        color: var(--orng);
+      }
+    }
+    .btn {
+      display: none;
+    }
+  }
+  .nav-social-links {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+
+    span {
+      width: 35px;
+      height: 35px;
+      border: 1px solid var(--orng);
+      border-radius: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.4s ease-in-out;
+    }
+
+    i {
+      color: var(--orng);
+      transition: 0.4s ease-in-out;
+    }
+
+    span:hover {
+      background-color: var(--orng);
+    }
+
+    span:hover i {
+      color: white;
+    }
+  }
+
+
+  .hero-left {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-right {
+    display: none;
+  }
+
+  .service {
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+    .flex-row {
+      gap: 40px;
+    }
+  }
+
+    .grid-top {
+      grid-template-columns: 1fr;
+    }
+
+  .team-bottom {
+    flex-wrap: wrap;
+  }
+
+  .apointment {
+    .flex-row {
+      flex-direction: column;
+      gap: 3rem;
+    }
+  }
+
+  .apointment-left, .apointment-right {
+    width: 100%;
+  }
+
+  .apointment-abs {
+    margin-left: 0;
+  }
+
+  footer {
+    .container {
+      padding: 0;
+    }
+  }
+
+  .footer-main {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+
+  .work-bottom {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 620px;
+    margin: 0 auto;
+  }
+  .header-bottom nav {
+    width: 280px;
+  }
+
+  .about,
+  .choose {
+    .flex-row {
+      flex-direction: column;
+    }
+    img {
+      margin-bottom: 1rem;
+    }
+
+    .single-content-inner {
+      text-align: center;
+    }
+  }
+
+  .about-left,
+  .choose-left,
+  .about-right,
+  .choose-right {
+    width: 100%;
+  }
+  .single-content {
+    .flex-row {
+      align-items: center;
+    }
+  }
+
+  .apointment-abs {
+    padding: 0;
+  }
+
+  .service {
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+    .flex-row {
+      gap: 40px;
+    }
+  }
+
+  .team-bottom {
+    justify-content: center;
+
+    img {
+      max-width: 500px;
+    }
+  }
+
+  .subscribe-section {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .sub-right, .sub-left {
+    width: 100%;
+  }
+
+  .work-bottom {
+    grid-template-columns: 100%;
+    row-gap: 4rem;
+  }
+}
+
+
+@media (min-width: 320px) and (max-width: 767px) {
+  *> .container, .project .container {
+    padding: 0 3rem;
+  }
+
+  .footer-main {
+    grid-template-columns: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
